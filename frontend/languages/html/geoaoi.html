@@ -4,144 +4,128 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Geo Location API</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Geo Location API</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
 
-        <script>
-            function allowDrop(ev) {
-                ev.preventDefault();
-            }
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
 
-            function drang (ev) {
-                ev.dataTransfer.setData("text", ev.target.id);
-            }
+      function drang(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
 
-            function drop(ev) {
-                ev.preventDefault();
-                var data = ev.dataTransfer.getData("Text");
-                ev.target.appendChild (document.getElementById (data)); 
-            }
-        </script>
-    </head>
-    <body>
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("Text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+    </script>
+  </head>
+  <body>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop (event)"></div>
 
-        <div id="div1" ondrop="drop(event)" ondragover="allowDrop (event)"></div>
+    <img
+      id="drag1"
+      src="../images/img-map-1.jpg"
+      alt=""
+      draggable="true"
+      ondragstart="drag(event)"
+      width="336"
+      height="69"
+    />
+    <br />
 
-        <img id="drag1" src="../images/img-map-1.jpg" alt="" draggable="true" ondragstart="drag(event)" width="336" height="69">
-        <br>
+    <button onclick="getCurrentPosition()">Get Location</button>
+    <div id="geo"></div>
 
-        <button onclick="getCurrentPosition()">Get Location</button>
-        <div id="geo">
-        
-        </div>
-
-        <script>
-                var a = document.getElementById("geo");
-                    function getCurrentPosition() {
-                        if (navigator.geolocation) { navigator.geolocation.getCurrentPosition(showUserPosition); }
-                        // if (navigator.geolocation) { navigator.geolocation.watchPosition(showPosition); }
-                        else {
-                            a.innerHTMl = "Geo Loaction is not Supported in this browser.";
-                        }
-                    }
-
-                    
-
-                    function showUserPosition(position) {
-                        var latitude = position.coords.latitude;
-                            longitude = position.coords.longitude;
-                        // alert("Latidude : "+ latitude + "Longitude : " + longitude);
-                            a.innerHTML = "latitude: " + position.coords.latitude +
-                            "<br>Longitude:" + position.coords.longitude + "<br> accuracy:" +position.coords.accuracy + "<br> Alt-accuracy:" + position.coords.altitudeAccuracy + "<br> Heading:" + position.coords.heading + "<br> Speed:" + position.coords.speed + "<br> Time Stamp:" + position.coords.timestamp;
-                    }
-                    
-                    function showError(error) {
-                        switch(error.code) {
-                            case error.Permission_Denied:
-                                a.innerHTML = "User Denied request for geo location. "
-                                break;
-                                case error.Position_Unavilable:
-                                    a.innerHTML = "Location Info Unavilable"
-                                    break;
-                                    case error.TimeOut:
-                                        a.innerHTML = "GEO timed out"
-                                        break;
-                                        case error.Unknown_Error:
-                                            a.innerHTML = "An unknown Error Occurred"
-                                            break;
-                        }
-                        getElementById (showError)
-                    }
-
-                   
-
-
-        </script>
-        <br>
-        <script>
-        if(typeof(Storage) !=="undefined") {
-        // localStorage/sessionStorage.
-        } else{
-        // Sorry! No Web Storage support..
+    <script>
+      var a = document.getElementById("geo");
+      function getCurrentPosition() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showUserPosition);
         }
+        // if (navigator.geolocation) { navigator.geolocation.watchPosition(showPosition); }
+        else {
+          a.innerHTMl = "Geo Loaction is not Supported in this browser.";
+        }
+      }
 
-        // to store data in html 
-        localStorage.city = "Mysore"
+      function showUserPosition(position) {
+        var latitude = position.coords.latitude;
+        longitude = position.coords.longitude;
+        // alert("Latidude : "+ latitude + "Longitude : " + longitude);
+        a.innerHTML =
+          "latitude: " +
+          position.coords.latitude +
+          "<br>Longitude:" +
+          position.coords.longitude +
+          "<br> accuracy:" +
+          position.coords.accuracy +
+          "<br> Alt-accuracy:" +
+          position.coords.altitudeAccuracy +
+          "<br> Heading:" +
+          position.coords.heading +
+          "<br> Speed:" +
+          position.coords.speed +
+          "<br> Time Stamp:" +
+          position.coords.timestamp;
+      }
 
-        // to retrive data from html storage
-        document.getElementById ("result").innerHTML = localStorage.city;
+      function showError(error) {
+        switch (error.code) {
+          case error.Permission_Denied:
+            a.innerHTML = "User Denied request for geo location. ";
+            break;
+          case error.Position_Unavilable:
+            a.innerHTML = "Location Info Unavilable";
+            break;
+          case error.TimeOut:
+            a.innerHTML = "GEO timed out";
+            break;
+          case error.Unknown_Error:
+            a.innerHTML = "An unknown Error Occurred";
+            break;
+        }
+        getElementById(showError);
+      }
+    </script>
 
-        // to remove or delete html data
-        localStorage.removeItem = ("city") 
+    <script>
+      function clickCounter() {
+        if (typeof Storage !== "undefined") {
+          if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount) + 1;
+          } else {
+            localStorage.clickcount = 1;
+          }
+          document.getElementById("result").innerHTML =
+            "You have clicked the button " +
+            localStorage.clickcount +
+            " time(s).";
+        } else {
+          document.getElementById("result").innerHTML =
+            "Sorry, your browser does not support web storage...";
+        }
+      }
+    </script>
 
-        </script>
-        <br>
-        <br>
-        <button>
+    <br />
 
+    <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+    <div id="result"></div>
+    <p>Click the button to see the counter increase.</p>
+    <p>
+      Close the browser tab (or window), and try again, and the counter will
+      continue to count (will not reset in localStorage).
+    </p>
 
-        </button> <script>
-             if (localStorage.clickcount) {
-                    localStorage.clickcount = Number(localStorage.clickcount) + 1;
-                } else {
-                    localStorage.clickcount = 1;
-                }
-                document.getElementById("result").innerHTML = "You have clicked the button" +
-                    localStorage.clickcount + "time(s)."; 
-            </script>
-            You have clicked the button
-        </button>
-
-        
-        <!-- <script>
-            
-            if (localStorage.clickcount) {
-                localStorage.clickcount = Number (localStorage.clickcount) + 1;
-            } else {
-                localStorage.clickcount = 1;
-            }
-            document.getElementById ("result").innerHTML = "You have clicked the button" +
-            localStorage.clickcount + "time(s).";
-        </script> -->
-
-
-        <!-- <form>
-            <button onclick="getCurrentPosition">Click for location</button>
-            <div id="geo">
-
-            </div>
-        </form>
-        <br>
-        <br> -->
-        
-        
-        
-        
-        <script src="web-workers.js" async defer></script>
-    </body>
+    <script src="" async defer></script>
+  </body>
 </html>
