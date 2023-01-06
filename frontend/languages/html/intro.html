@@ -4,48 +4,222 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Block & Inline Elements</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
+  <head >
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Block & Inline Elements</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image /x-icon" href="../images/fevicon.jpg">
 
-        <p>Hello World</p>
-        <div>Hello World</div>
-        <span>Hello World</span>
+    <style>
 
-        <div style="background-color:black;color:white;padding:20px;">
-            <h2>London</h2>
-            <p>London is the capital city of England. It is the most populous city in the United Kingdom, 
-                with a metropolitan area of over 13 million inhabitants.</p>
-            </div>
+      
+      body {
+        /* background-image: url(../images/img-4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-color: brown;} */
+        background-image: url(../images/img-4.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
 
+      h2 
+      {
+        color: green
+        font-family; Arial: Helvetica, sans-serif;
+        font-size: 40px;
+      }
+      
+      h3 
+      {color: purple;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 30px;
+      
+      }
+      
+      
+    </style>
+
+    <style>
+      div 
+      {
+        background-image: url(../images/img2.jpeg);
+        background-repeat: no-repeat;
+      }
+    </style>
+    
+  </head>
+
+  <p id="top">Top of the Page</p>
+
+  <body style="background-color:powderblue;">
+          
+    <script>
+      function kids() {
+        alert("Kids Playing with laptop!");
+      }
+
+      function chair()  {
+        alert("Its a Black chair")
+      }
+
+      function laptop ()  {
+        alert("Its MAcBook")
+      }
+    </script>
+
+    <img src="/frontend/languages/images/img-map-1.jpg" alt="kids with lapto" usemap="#img-map-1">
+    <img src="img-map-1.jpg" usemap="#image-map">
+    
+    <map name="img-map-1">
+      <area target="_blank" alt="" title="" href="https://www.verywellfamily.com/best-toy-laptops-for-kids-1259008" onclick="kids()" coords="302,714,821,114" shape="rect">
+      <area target="" alt="" title="" href="https://www.firstcry.com/toys-and-gaming/5/0/0"
+        coords="1234,181,1319,166,1385,203,1406,461,1492,508,1528,608,1436,952,1073,962,1044,591,1058,493,1143,179,1195,162,1231,164"
+        shape="poly">
+      <area target="" alt="" title="" href="https://www.flipkart.com/laptops-store"
+        coords="1250,973,753,1092,1504,1243,1847,1049,1917,610,1918,414,1660,305,1913,714,1525,995,1662,309,1918,714,1523,997,1913,714,1528,993,1530,995"
+        shape="poly">
+      <area target="" alt="" title="" href="https://www.ikea.com/in/en/cat/chairs-fu002/" coords="980,381,1026,568,1031,761,967,949,911,1005,762,1046,741,1046,738,807"
+        shape="poly">
+    </map>
+      
+    </map>
+    <a href="https://softpro9.com" title="Welcome to SoftPro9">Learining HTML with FDS</a>
+    
+    <a href="mailto:gamil@gmail.com">Send Email</a>
+
+    <button onclick="document.location=document">HTML Button</button>
+    
+
+    <h1 style="border: 10px solid red;">Welcome to HTML Classes</h1>
+    <p >Will learn about html today, css & java script</p>
+    <p>New CSS Styling</p>
+    
+    <div style="background-image:url(../images/img1.jpg);
+    background-repeat: no-repeat;">
+      <h2>Welcome to Mysore</h2>
+      <br>
+      <h3>Welcmoem to Mangalore</h3>
+      <br>
+      <p>Display of border with this text</p>
+    </div>
+
+        <div style="background-color: MediumSeaGreen ;">
+          <h1 style="font-size: 150%;">Welcome to Html Style element</h1>
+          <h2 style="text-align: center;">Welcome to Html Style element</h2>
+          <h2 style="text-align: right;">Welcome to Html Style element</h2>
+          <p style="color:white;">Lets know how to add style to html.</p>
+        </div>
+         <div style="background-color: goldenrod;">
+          <b>This text is bold</b>
+          <br>
+          <strong>This text is bold</strong>
+          <br>
+          <i>This text is italic</i>
             <br>
-            
-            <div style="background-color: burlywood;color: white;padding: 35px;">
-                <h2>Myosre</h2>
-                <p>Welcome to <a href="https://en.wikipedia.org/wiki/Mysore">
-                    Mysore </a>as ita a heritage city in Karnataka</p>
-                    <a href="gmail.com">
-                    <img src="../images/img1.jpg" alt="Mysore is a heritage city" height="250px width="300px">
-                    </a>
+            <em>This text is emphasized</em>
+            <br>
+            <small>This is some smaller text.</small>
+            <br>
+            <p>Do not forget to get <mark>Milk</mark>today</p>
+            <br>
+            <h2>            
+            <p>My favorite color is <del>black</del> <ins>white</ins></p>
+            <p>My favorite color is <sub>red</sub>instead of black</p>
+            <p>My favorite color is <sup>Black</sup>instead of red</p>
+          </h2>
+         </div>  
 
-                <p>My mother has <span style="color:blue;font-weight:bold;">blue</span>eyes 
-                    and my father has <span style="color:darkolivegreen;font-weight:bold;">
-                        dark green</span>eyes.</p>
-
-            </div>
-
-            <p>My mother has<span style="color:blue;font-weight:bold;">blue</span>eyes 
-                and my father has<span style="color:darkolivegreen;font-weight:bold;">
-                    dark green</span>eyes.</p>
 
         
         
-        <script src="" async defer></script>
-    </body>
+      <p>
+      
+        <img
+          src="https://softpro9.com/wp-content/uploads/2022/11/Content-Marketing-Training-In-Mysore.jpg"
+          alt="Content Marketing"
+          style="float: right; width: 300px"
+          height="200px"
+        />
+        The image will float to the right of the text.
+      </p>
+
+      <p>
+        <img
+          src="https://softpro9.com/wp-content/uploads/2022/11/SEO-training-in-bangalore.jpg"
+          alt="seo training"
+          style="float: left; width: 300px"
+          height="200px"
+        />The image will float to the left of the text
+      </p>
+    </div>
+    <br />
+
+    <p>Hello World</p>
+    <div>Hello World</div>
+    <span>Hello World</span>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    
+
+    <div style="background-color: black; color: white; padding: 20px">
+      <h2>London</h2>
+      <p>
+        London is the capital city of England. It is the most populous city in
+        the United Kingdom, with a metropolitan area of over 13 million
+        inhabitants.
+      </p>
+    </div>
+
+    <br />
+
+    <div style="background-color: burlywood; color: white; padding: 35px">
+      <h2>Myosre</h2>
+      <p>
+        Welcome to <a href="https://en.wikipedia.org/wiki/Mysore"> Mysore </a>as
+        ita a heritage city in Karnataka
+      </p>
+
+      <a href="https://en.wikipedia.org/wiki/Mysore">
+        <img
+        src="https://softpro9.com/wp-content/uploads/2022/11/advanced-didital-kmarketing-training-mysore-softpro9.jpg"
+        alt="Mysore is a heritage city" height="250px width=" 300px">
+      </a>
+
+      <p>
+        My mother has
+        <span style="color: blue; font-weight: bold">blue</span>eyes and my
+        father has
+        <span style="color: darkolivegreen; font-weight: bold"> dark green</span
+        >eyes.
+      </p>
+    </div>
+
+    <p>
+      My mother has<span style="color: blue; font-weight: bold">blue</span>eyes
+      and my father has<span style="color: darkolivegreen; font-weight: bold">
+        dark green</span
+      >eyes.
+    </p>
+    <a href="https://google.com" target="_blank">Google India</a>
+    <br>
+    <a href="https://softpro9.com" target="">SoftPro9 Mysore</a>
+
+    <script src="" async defer></script>
+    <a href=""></a>
+    <br>
+    <a href="#top">Scroll to Top</a>
+
+    
+  </body>
 </html>

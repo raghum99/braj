@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Forms</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <form action="" method="post">
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname" value="Supreetha" size="20" required autofocus><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname" value="MS"><br>
+            <label for="contactn">Contact #:</label><br>
+            <input type="tel" id="contactn" name="conactn" placeholder="123-456-7890" pattern="[0-9] {3}-[0-9] {3}-[0-9] {4}"><br>
+            <label for="files">Upload Files</label>
+            <input type="file" name="files" id="files" multiple>
+            <br>
+            <label for="currency">Currency</label>
+            <input type="text" name="currency" id="currency" pattern="[A-Za-z] {3}" title="Select Currency" maxlength="3" autofocus>
+            <br>
+            <input type="image" src="../images/img-4.jpg" height="60px" width="60px" alt="submit" name="" id="">
+            <br>
+            <label for="city">Select City</label>
+            <input list="Cities"> 
+            <datalist id="Cities">
+                <option value="Mysore">
+                <option value="Bangalore">
+                <option value="Mangalore">
+
+            </datalist>
+        <!-- Section with radio button -->
+            <p>Select City</p>
+            <input type="radio" id="bangalore" name="city" value="bangalore">
+            <label for="Bangalore">Bangalore</label><br>
+            <input type="radio" name="city" id="Mysore" value="Mysore">
+            <label for="Mysore">Mysore</label><br>
+            <input type="radio" name="city" id="Pune" value="Pune">
+            <label for="Pune">Pune</label><br>
+            <!-- Section with checkbos -->
+            <br>
+            <p>Select the phone you own</p>
+            <input type="checkbox" id="phone" name="phone" value="Apple">
+            <label for="Apple">Apple</label><br>
+            <input type="checkbox" id="phone" name="phone" value="Samsung" >
+            <label for="Samsung">Samsung</label><br>
+            <input type="checkbox" id="phone" name="phone" value="Nokia">
+            <label for="Nokia">Nokia</label><br>
+            <input type="hidden" id="custId" name="custId" value="5001">
+            <br>
+            <input type="submit" value="Submit">
+            <br>
+            <form action="" novalidate>
+                <fieldset>
+                    <legend>Personal Info</legend>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John" disabled><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br>
+                <!-- <label for="Cities">Choose a City</label>
+                <select name="city" id="city" size="" multiple> -->
+                <input list="Cities">
+                <datalist id="Cities">
+                <option value="Mysore">Mysore</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Mangalore">Mangalore</option>
+                </datalist>
+                <input type="reset">
+                <br>
+                <textarea name="message" style="height: 100px; width: 200px;"></textarea>
+                <br>
+                <button type="button" onclick="alert ('Welcome to Mysore')" >Click here</button>
+                </fieldset>
+                <br>
+                <label for="username">User Name</label>
+                <input type="text" id="username" name="userbame"><br>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" >
+                <input type="reset">
+                <br>
+                <label for="favcolor">Choose Color</label>
+                <input type="color" id="favcolor" name="favcolor">
+                <br>
+                <label for="birthday">Birthday</label>
+                <input type="date" id="birthday" name="birthday">
+                <br>
+                <label for="maxdate">Enter a date before 1970-01-01:</label>
+                <input type="date" id="maxdate" name="maxdate" max="1969-12-31"><br><br>
+                <label for="mindate">Enter a date after 1980-01-01:</label>
+                <input type="date" id="mindate" name="mindate" min="1980-01-02">
+                <br>
+                <label for="birthdaytime">Time of Birth</label>
+                <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+                <br>
+                <label for="email">Enter Email ID:</label>
+                <input type="email" name="email" id="email">
+                <br>
+                <input type="image" src="../images/image-1.jpg" alt="image" with="50px" height="50px">
+                <br>
+                <label for="myfile">Select File</label>
+                <input type="file" id="myfile" name="myfile">
+                <br>
+                <label for="bithmonth">Slect Month of Birth</label>
+                <input type="month" name="bithmonth" id="bithmonth">
+                <br>
+                <label for="review">Review (Between 1 to 5, higher will be for best):</label>
+                <input type="number" name="review" id="review" min="1" max="100" step="10" value="20">
+                <br>
+                <label for="vol">Volume (Between 0 - 100):</label>
+                <input type="range" name="vol" id="vol" min="0" max="100">
+                <br>
+                <label for="gsearch">Search</label>
+                <input type="search" id="gsearch" name="gsearch">
+                <br>
+                <label for="tel">Contact Number</label>
+                <input type="tel" id="tel" name="tel">
+                <br>
+                <label for="appt">Select Time</label>
+                <input type="time" id="appt" name="appt">
+                <br>
+                <label for="fprofile">Facebook Profile</label>
+                <input type="url" name="fprofile" id="fprofile">
+                <br>
+                <label for="week">Select a Week</label>
+                <input type="week" id="week" name="week">
+               
+                
+                
+
+            </form>
+            <br>
+            <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                0
+                <input type="range" id="a" name="a" value="50">
+                100 +
+                <input type="number" id="b" name="b" value="50">
+                =
+                <output name="x" for="a b"></output>
+                <br><br>
+                <input type="submit">
+            </form>
+            <br>
+            <input type="submit" value="submit">
+            <br>
+            <input type="reset">
+        </form>
+        <br>
+    
+        
+        
+        <script src="" async defer></script>
+    </body>
+</html>

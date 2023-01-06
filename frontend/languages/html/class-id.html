@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Class & ID</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .city {
+            background-color: aqua;
+            color: brown;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+            }
+
+            .supreetha {
+            background-color: blueviolet;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+            }
+
+            .text {
+                font-size: 100%;
+                color: gold;
+                font-style: italic;
+            }
+
+            #header {
+                background-color: yellowgreen;
+                color: green;
+                padding: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="city text">
+            <h1>Bangalore</h1>
+            <p>Bangalore is capital city of Karnataka</p>
+
+        </div>
+        <br>
+        <div class="supreetha">
+            <h1>Mysore</h1>
+            <p> Mysore is a city of Karnataka</p>
+        
+        </div>
+        <br>
+        <div class="city">
+            <h1>Mangalore</h1>
+            <p>Mangalore is costal city of Karnataka</p>
+        
+        </div>
+        <br>
+        <h2>Delhi is the capirtal city of <span class="text">India</span> with all <span class="text">Political</span> offices located</h2>
+
+        <h2 class="city">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, error!</h2>
+        <p class="city text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit perspiciatis et molestias a deleniti repellendus obcaecati praesentium veniam laboriosam earum officiis magni, rem culpa illo?</p>
+        <br>
+        <script>
+            function func1 (){
+                var x = document.getElementsByClassName("city");
+                for (var i = 0; i < x.length; i++ ) {
+                    x[i].style.display = "none";
+                }
+            }
+        </script>
+        <br>
+        <h2 id="header">Text with JS Function</h2>
+        <br>
+        <h3 id="func1">Welcoe to <a href="bookmarking.html#Lorem">Mysore</a> </h3>
+        <br>
+        <!-- An element with a unique id -->
+        <h1 id="header">My Cities</h1>
+        
+        <!-- Multiple elements with same class -->
+        <h2 class="city">London</h2>
+        <p>London is the capital of England.</p>
+        
+        <h2 class="city">Paris</h2>
+        <p>Paris is the capital of France.</p>
+        
+        <h2 class="city">Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+
+        <br>
+        <div id="header">
+            <h1 class="text">Welcome to Bangalore</h1>
+        </div>
+
+
+    
+            
+        
+        
+        <script src="" async defer></script>
+    </body>
+</html>
